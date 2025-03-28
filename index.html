@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        
+        <title>U.S. Economic Stability Map</title>
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    </head>
+    <body>
+        <header>
+            <h1>U.S. Economic Stability - State by State</h1>
+        </header>
+
+        <main>
+            <section>
+                <p>These maps showcase the unemployment rates starting with the end of the previous Administration.</p>
+                <p>We will continue to compare rates as the data is made available. </p>
+            </section>
+            <section class="map-container">
+                <iframe src="{{ url_for('static', filename='eco_map_2.html') }}"></iframe>
+                <iframe src="{{ url_for('static', filename='eco_map_1.html') }}"></iframe>
+            </section>
+            <section>
+                <h2>U.S. DOE Reductions Worse Case 100% - State by State</h2>
+                <p>If the Department of Education were to be eliminated, the estimated number of entry-level teaching positions that would be affected is shown below.
+                    Note: The values displayed should be multiplied by 1,000 to reflect the actual number of teachers impacted.</p>
+            </section>
+            <section class="map-container">
+                <iframe src="{{ url_for('static', filename='edu_map.html') }}"></iframe>
+            </section>
+            <section>
+                <h2> U.S. Federal Debt: Total Public Debt</h2>
+                <p> With the new administration’s proposed spending cuts, we may see a potential decrease in total public debt over time. </p>
+            </section>
+            <section class="map-container">
+                <iframe src="{{ url_for('static', filename='federal_debt_chart.html') }}"></iframe>
+            </section>
+        </main>
+
+        <footer>
+            <p>2024 U.S. Economic Data Visualization by Vardragon </P>
+                <p>Data source: <a href="https://fred.stlouisfed.org/series/GDP" target="_blank">FRED - U.S. GDP</a></p>      
+                <p><a href="https://edlawcenter.org/" target="_blank">Education Law Center</a></p>
+            <p>U.S. Department of the Treasury. Fiscal Service</p>
+            <p>Federal Debt: Total Public Debt [GFDEBTN], retrieved from FRED, 
+                Federal Reserve Bank of St. Louis<a href="https://fred.stlouisfed.org/series/GFDEBTN"></a>, March 27, 2025.</p>
+        </footer>
+    </body>
+</html>
+    
