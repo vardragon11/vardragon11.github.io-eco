@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
         
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="{{ url_for('.', filename='style.css') }}">
+        <link rel="stylesheet" href="{{ url_for(filename='style.css') }}">
 
     </head>
     <body>
@@ -25,8 +25,8 @@
                 <p>We will continue to compare rates as the data is made available. </p>
             </section>
             <section class="map-container">
-                <iframe src="{{ url_for('.', filename='eco_map_2.html') }}"></iframe>
-                <iframe src="{{ url_for('.', filename='eco_map_1.html') }}"></iframe>
+                <iframe src="{{ url_for(filename='eco_map_2.html') }}"></iframe>
+                <iframe src="{{ url_for(filename='eco_map_1.html') }}"></iframe>
             </section>
             <section>
                 <h2>U.S. DOE Reductions Worse Case 100% - State by State</h2>
@@ -34,14 +34,14 @@
                     Note: The values displayed should be multiplied by 1,000 to reflect the actual number of teachers impacted.</p>
             </section>
             <section class="map-container">
-                <iframe src="{{ url_for('.', filename='edu_map.html') }}"></iframe>
+                <iframe src="{{ url_for(filename='edu_map.html') }}"></iframe>
             </section>
             <section>
                 <h2> U.S. Federal Debt: Total Public Debt</h2>
                 <p> With the new administration’s proposed spending cuts, we may see a potential decrease in total public debt over time. </p>
             </section>
             <section class="map-container">
-                <iframe src="{{ url_for('.', filename='federal_debt_chart.html') }}"></iframe>
+                <iframe src="{{ url_for(filename='federal_debt_chart.html') }}"></iframe>
             </section>
         </main>
 
